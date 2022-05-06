@@ -1,6 +1,11 @@
 import React from 'react'
 import MenuItem from '../menu-item/menu-item.component'
-// import MenuItem from './images/33.png'
+import iconCards from './images/33.png'
+import iconMachine from './images/gabinete.jpg'
+import iconMotherBoard from './images/2.png'
+import iconProcessor from './images/18.png'
+import iconRam from './images/14.png'
+import iconStorage from './images/41.png'
 
 import './directory.styles.scss'
 
@@ -12,32 +17,32 @@ class Directory extends React.Component {
             sections: [
                 {
                     title: 'machines',
-                    imageUrl: 33,
+                    imageUrl: iconMachine,
                     id: 1
                 },
                 {
                     title: 'cards',
-                    imageUrl: 23,
+                    imageUrl: iconCards,
                     id: 2
                 },
                 {
                     title: 'motherboards',
-                    imageUrl: 1,
+                    imageUrl: iconMotherBoard,
                     id: 3
                 },
                 {
                     title: 'processors',
-                    imageUrl: 6,
+                    imageUrl: iconProcessor,
                     id: 4
                 },
                 {
                     title: 'ram',
-                    imageUrl: 13,
+                    imageUrl: iconRam,
                     id: 5
                 },
                 {
                     title: 'storage',
-                    imageUrl: 18,
+                    imageUrl: iconStorage,
                     id: 6
                 }
             ]
@@ -48,7 +53,7 @@ class Directory extends React.Component {
                 <div className='directory-menu'>
                     {
                         this.state.sections.map(({title, imageUrl, id}) => (
-                            <MenuItem key={id} title={title} imageUrl={`/Users/user/WebstormProjects/ecommerce/src/components/directory/images/${imageUrl}.png`} />
+                            <MenuItem key={id} title={title} imageUrl={imageUrl} />
                         ))
                     }
                 </div>
