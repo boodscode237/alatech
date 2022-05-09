@@ -13,7 +13,7 @@ const CollectionItem = ({id, name, description, imageUrl}) => (
         />
           <div className='collection-footer'>
               <span className='name'>{ name }</span>
-              <span className='name'>{ description }</span>
+              <span className='name'>{ `${description.slice(0, 25)}...` }</span>
           </div>
     </div>
 )
